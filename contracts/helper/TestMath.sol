@@ -1,0 +1,61 @@
+/*
+
+    Copyright 2019 The Hydro Protocol Foundation
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+*/
+
+pragma solidity 0.5.8;
+
+import "../lib/SafeMath.sol";
+
+/**
+ * Test wrapper
+ */
+contract TestMath {
+    function isRoundingError(
+        uint256 a,
+        uint256 b,
+        uint256 c
+    )
+        public
+        pure
+        returns (bool)
+    {
+        return SafeMath.isRoundingError(a, b, c);
+    }
+
+    function getPartialAmountFloor(
+        uint256 a,
+        uint256 b,
+        uint256 c
+    )
+        public
+        pure
+        returns (uint256)
+    {
+        return SafeMath.getPartialAmountFloor(a, b, c);
+    }
+
+    function min(
+        uint256 a,
+        uint256 b
+    )
+        public
+        pure
+        returns (uint256)
+    {
+        return SafeMath.min(a, b);
+    }
+}

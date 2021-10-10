@@ -1,0 +1,12 @@
+node_modules
+build
+.idea
+.vscode
+
+coverage
+coverage.json
+coverageEnv
+scTopics
+allFiredEvents
+
+scripts/*_tmp.js
